@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     [SerializeField] private GameInput gameInput;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float dashCooldown = 2f;
+    [SerializeField] private LayerMask dashLayerMask;
+    [SerializeField] private float dashDistance = 50f;
 
     private bool isWalking;
-    private Vector2 moveDir;
+    private Vector3 moveDir;
     private Rigidbody2D rb;
     private float lastHorizontalVector;
     private float lastVerticalVector;
@@ -38,7 +40,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        dashCooldown += Time.deltaTime;
+        dashCounter += Time.deltaTime;
         HandleInput();
     }
 
@@ -51,8 +53,17 @@ public class Player : MonoBehaviour
     {
         if(dashCounter > dashCooldown)
         {
+            Debug.Log(dashCounter);
             dashCounter = 0f;
-            //dash
+            rb.MovePosition(transform.position + moveDir * dashDistance);
+
+
+            /*RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, moveDir, dashAmount, dashLayerMask);
+            if(raycastHit2D.collider != null)
+            {
+                Debug.Log("aa");
+                dashPosition = raycastHit2D.point;
+            }*/
         }
 
         //dash
@@ -68,9 +79,9 @@ public class Player : MonoBehaviour
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-        moveDir = new Vector2(inputVector.x, inputVector.y);
+        moveDir = new Vector3(inputVector.x, inputVector.y, 0f);
 
-        isWalking = moveDir != Vector2.zero;
+        isWalking = moveDir != Vector3.zero;
 
         if (moveDir.x != 0)
         {
