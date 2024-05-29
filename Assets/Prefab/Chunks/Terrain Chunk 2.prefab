@@ -232,8 +232,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6125137422654688011}
-  - component: {fileID: 6125137422654688012}
   - component: {fileID: 6125137422654688013}
+  - component: {fileID: 2760547029744179027}
   m_Layer: 6
   m_Name: Terrain Chunk 2
   m_TagString: Untagged
@@ -266,42 +266,6 @@ Transform:
   - {fileID: 2789215317654377986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6125137422654688012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6125137422654688010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72a7a4dcee104e4892acce195296eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  propSpawnPoints:
-  - {fileID: 6125137422582869626}
-  - {fileID: 6125137423715972952}
-  - {fileID: 6125137423775143573}
-  - {fileID: 6125137423061607958}
-  - {fileID: 6125137422795999688}
-  - {fileID: 6125137424171486147}
-  propPrefabs:
-  - {fileID: 7607992574860669490, guid: 35ea88bf871ecc34e8585823e70e5bd2, type: 3}
-  - {fileID: 8257231838539591621, guid: e6155ffebed6b3e46ab4ff64dfb87187, type: 3}
-  - {fileID: 5852307522512187403, guid: 40459554d2b57c54d9030f642dc7c5d3, type: 3}
-  - {fileID: 8039234850403010043, guid: ecaaadaf7e1f8df46bb3906e0c901b96, type: 3}
-  - {fileID: 3046744640966521160, guid: eca18fc7f3535d5458d11933f228ebe3, type: 3}
-  - {fileID: 956236222812848381, guid: 20cb4340efaeb3d43afb3536fdd4ff9c, type: 3}
-  - {fileID: 6749304893824733905, guid: 8512c018634bf334f966e85bc752550e, type: 3}
-  - {fileID: 4525107887444915319, guid: d6948c110458fd84a8b871a2e66e74e9, type: 3}
-  - {fileID: 8715573077916874166, guid: 593b9c01358bd60488c9bb264d0c4105, type: 3}
-  - {fileID: 4527640101741653549, guid: f327e58889c938b41a160f0108d92da5, type: 3}
-  - {fileID: 8762939810884008357, guid: 6e4f2097597401f48b6f33fa92cc787d, type: 3}
-  - {fileID: 2909733493446181631, guid: 2645dcb467d391c4d9d446516c7b2fa9, type: 3}
-  - {fileID: 6736761627571241625, guid: 54f317a23d9c7e34ea59c5ed84016e49, type: 3}
-  - {fileID: 6015147786237641494, guid: 161b856e7aa568a45873d12eb8b1b9be, type: 3}
-  - {fileID: 7080323897297108146, guid: 930060e6621b1a243a66c36810db69e8, type: 3}
-  - {fileID: 5806093378459353442, guid: 83cb6a5279735d94bb77aa0d5e2c14fe, type: 3}
 --- !u!61 &6125137422654688013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -347,6 +311,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
+--- !u!114 &2760547029744179027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125137422654688010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4c3a02a8aadef4badbf102e0dba513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propSpawnPoints:
+  - {fileID: 6125137422582869626}
+  - {fileID: 6125137423715972952}
+  - {fileID: 6125137423775143573}
+  - {fileID: 6125137423061607958}
+  - {fileID: 6125137422795999688}
+  - {fileID: 6125137424171486147}
+  propPrefabs:
+  - {fileID: 7607992574860669490, guid: 35ea88bf871ecc34e8585823e70e5bd2, type: 3}
+  - {fileID: 8257231838539591621, guid: e6155ffebed6b3e46ab4ff64dfb87187, type: 3}
+  - {fileID: 5852307522512187403, guid: 40459554d2b57c54d9030f642dc7c5d3, type: 3}
+  - {fileID: 8039234850403010043, guid: ecaaadaf7e1f8df46bb3906e0c901b96, type: 3}
+  - {fileID: 3046744640966521160, guid: eca18fc7f3535d5458d11933f228ebe3, type: 3}
+  - {fileID: 956236222812848381, guid: 20cb4340efaeb3d43afb3536fdd4ff9c, type: 3}
+  - {fileID: 6749304893824733905, guid: 8512c018634bf334f966e85bc752550e, type: 3}
+  - {fileID: 4525107887444915319, guid: d6948c110458fd84a8b871a2e66e74e9, type: 3}
+  - {fileID: 8715573077916874166, guid: 593b9c01358bd60488c9bb264d0c4105, type: 3}
+  - {fileID: 4527640101741653549, guid: f327e58889c938b41a160f0108d92da5, type: 3}
+  - {fileID: 8762939810884008357, guid: 6e4f2097597401f48b6f33fa92cc787d, type: 3}
+  - {fileID: 2909733493446181631, guid: 2645dcb467d391c4d9d446516c7b2fa9, type: 3}
+  - {fileID: 6736761627571241625, guid: 54f317a23d9c7e34ea59c5ed84016e49, type: 3}
+  - {fileID: 6015147786237641494, guid: 161b856e7aa568a45873d12eb8b1b9be, type: 3}
+  - {fileID: 7080323897297108146, guid: 930060e6621b1a243a66c36810db69e8, type: 3}
+  - {fileID: 5806093378459353442, guid: 83cb6a5279735d94bb77aa0d5e2c14fe, type: 3}
 --- !u!1 &6125137422795999688
 GameObject:
   m_ObjectHideFlags: 0
